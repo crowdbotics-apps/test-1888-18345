@@ -2,7 +2,8 @@ from django.shortcuts import render
 
 # Create your views here.
 
-from home.models import CustomText, HomePage
+# from .models.custom_text import CustomText
+from .models.home_page import HomePage
 
 
 def home(request):
@@ -12,7 +13,8 @@ def home(request):
 	{'name':'djangorestframework', 'url': 'https://pypi.org/project/djangorestframework/3.9.0/'},
     ]
     context = {
-        'customtext': CustomText.objects.first(),
+        # 'customtext': CustomText.objects.first(),
+        'customtext': 'test',
         'homepage': HomePage.objects.first(),
         'packages': packages
     }

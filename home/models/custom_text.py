@@ -1,4 +1,3 @@
-from django.db import models
 
 # Create your models here.
 
@@ -18,15 +17,3 @@ class CustomText(models.Model):
     @property
     def field(self):
         return 'title'
-
-
-class HomePage(models.Model):
-    body = models.TextField()
-
-    @property
-    def api(self):
-        return f'/api/v1/homepage/{self.id}/'
-
-    @property
-    def field(self):
-        return 'body'
